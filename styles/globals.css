@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* injecting custom utility classes to our jsx file */
+@layer components {
+    .heroButton {
+        @apply px-4 py-1 text-xs border-[#6B728E] rounded-full uppercase tracking-widest text-gray-500 transition-all border hover:border-[#F7AB0A] hover:text-[#F7AB0A]
+    }
+
+    .heading {
+        @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl
+    }
+
+    .contact-input {
+        @apply outline-none bg-slate-400/30 rounded-md border-b px-3 py-2 border-[#242424] text-gray-300 placeholder-gray-400 transition-all focus:border-[#f7AB0A] focus:text-gray-100 caret-[#F7AB0A]
+    }
+
+    .contact-button {
+        @apply px-3 py-3 text-lg border-none rounded-md uppercase tracking-widest text-black font-bold transition-all bg-[#F7AB0A] active:scale-90
+    }
+
+}
