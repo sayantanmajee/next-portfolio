@@ -60,7 +60,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
                     x: 0,
                     opacity: 0.75
                 }}
-                className='hidden md:flex text-[#c2c7e2]/60 mt-1 uppercase'>{skill.title}</motion.div>
+                className='hidden lg:flex text-[#c2c7e2]/60 mt-1 uppercase'>{skill.title}</motion.div>
 
         </div>
 

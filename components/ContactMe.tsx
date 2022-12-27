@@ -8,7 +8,7 @@ type Props = {
   pageInfo: PageInfo
 }
 
-const ContactMe = ({ pageInfo }: Props) => {
+const ContactMe = ({ pageInfo}: Props) => {
 
   const SERVICE_ID = process.env.NEXT_PUBLIC_CONTACT_ME_SERVICE_ID
   const TEMPLATE_ID = process.env.NEXT_PUBLIC_CONTACT_ME_TEMPLATE_ID
@@ -18,7 +18,7 @@ const ContactMe = ({ pageInfo }: Props) => {
   const form = useRef()
   const [submitted, setSubmitted] = useState(false)
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     if (submitted === false) {
@@ -99,7 +99,7 @@ const ContactMe = ({ pageInfo }: Props) => {
           placeholder='Subject' />
         <textarea 
         {...register("message")} 
-        className='contact-input min-h-[7rem] max-h-[12rem]' name="message" id="" cols="30" rows="5" 
+        className='contact-input min-h-[7rem] max-h-[12rem]' name="message" id="" cols={30} rows={5} 
         required
         placeholder='Write your message here...'></textarea>
         <button type='submit' value='send' className={submitted ? 'contact-button-submitted' : 'contact-button'}>{submitted ? 'Submitted' : 'Send'}</button>

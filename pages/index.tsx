@@ -10,7 +10,7 @@ import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import WorkExperience from '../components/WorkExperience'
 import { ArrowUpIcon } from '@heroicons/react/24/solid'
-import type { GetStaticProps } from 'next'
+import { GetStaticProps } from 'next'
 import { Experience, PageInfo, Project, Skill, Social } from '../typings'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
 import { fetchExperiences } from '../utils/fetchExperiences'
@@ -96,6 +96,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     // Next.js will attempt to re-generate the page
     // - when a request comes in
     // - at most once every 5 seconds
-    revalidate: 1,
+    revalidate: 5,
   }
 }

@@ -31,6 +31,7 @@ function Hero({ pageInfo }: Props) {
                 alt="Picture of the author"
                 width={500}
                 height={500}
+                priority
             />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-400 pb-2 tracking-[20px]'>{pageInfo?.role}
