@@ -21,5 +21,8 @@
     .contact-button {
         @apply px-3 py-3 text-lg border-none rounded-md uppercase tracking-widest text-black font-bold transition-all bg-[#F7AB0A] active:scale-90
     }
+    .contact-button-submitted {
+        @apply px-3 py-3 text-lg border-none rounded-md uppercase tracking-widest text-black font-bold transition-all bg-[#727272] pointer-events-none
+    }
 
 }
