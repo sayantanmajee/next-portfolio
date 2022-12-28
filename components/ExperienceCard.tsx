@@ -11,19 +11,19 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
     return (
-        <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px]  md:w-[500px] snap-center bg-[#474E68] px-10 py-3 md:px-5 mb-10 opacsity-70 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden '>
+        <article className='flex flex-col rounded-lg items-center space-y-4 md:space-y-7 flex-shrink-0 w-[330px]  md:w-[600px] md:h-[93%] snap-center bg-[#474E68] px-5 py-3 mb-10 opacsity-70 hover:opacity-100 transition-opacity duration-200 overflow-hidden '>
             <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2 }}
-                className='w-24 h-24 my-4 rounded-md xl:w-32 xl:h-32 object-scale-down object-center'
+                className='h-20 w-20 md:w-24 md:h-24 xl:w-32 xl:h-32 my-2 md:my-4 rounded-md  object-scale-down object-center'
                 src={urlFor(experience?.companyImage).url()} alt="" />
 
-            <div className='px-0 md:px-10 pb-2'>
-                <h4 className='text-2xl font-light uppercase'>{experience?.jobTitle}</h4>
-                <p className='font-bold text-xl mt-1'>{experience?.companyName}</p>
-                <div className='flex flex-row space-x-1 md:space-x-3 py-2'>
+            <div className='h-2/3 px-0 md:px-10 pb-2 space-y-2 md:space-y-3'>
+                <h4 className='text-lg md:text-2xl font-light uppercase'>{experience?.jobTitle}</h4>
+                <p className='font-bold text-xl md:text-2xl'>{experience?.companyName}</p>
+                <div className='flex flex-row space-x-1 md:space-x-3'>
                     {/* tech used */}
                     {experience.technologies.map((technology) => (
                         // <div
@@ -31,21 +31,21 @@ const ExperienceCard = ({ experience }: Props) => {
                         // >
                             <Image
                             key={technology._id}
-                                className='rounded-full bg-blue-500/20 object-contain h-10 w-10'
-                                src={urlFor(technology?.image).url()} alt=""
+                                className='rounded-full bg-blue-500/20 object-contain h-7 w-7 md:h-10 md:w-10'
+                                src={urlFor(technology?.image).url()} alt="technology-icon"
                                 width={10}
                                 height={10} />
                         // </div>
 
                     ))}
                 </div>
-                <p className='uppercase py-5 text-gray-400 '>
+                <p className='uppercase text-xs md:text-base text-gray-400 '>
                     {new Date(experience.dateStarted).toDateString().slice(4)}{" "}-{" "}{experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString().slice(4)}
                 </p>
-                <ul className='h-48 md:h-60 pb-2 list-disc space-y-4 text-base overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60'>
+                <ul className='h-4/6 md:h-[11rem] list-disc space-y-3 text-sm md:text-base overflow-y-scroll pr-3 md:pr-5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60'>
 
                     {experience.points.map((point, idx) => (
-                        <li key={idx}>{point}</li>
+                        <li key={idx} className={idx%2=== 0 ?"text-[#F7AB0A]" : "text-[#6cbec4]"}>{point}</li>
                     ))}
                 </ul>
             </div>

@@ -7,11 +7,11 @@
 /* injecting custom utility classes to our jsx file */
 @layer components {
     .heroButton {
-        @apply px-4 py-1 text-xs border-[#6B728E] rounded-full uppercase tracking-widest text-gray-500 transition-all border hover:border-[#F7AB0A] hover:text-[#F7AB0A]
+        @apply px-4 py-1 text-xs md:text-sm border-[#6B728E] rounded-full uppercase tracking-widest text-gray-500 transition-all border hover:border-[#F7AB0A] hover:text-[#F7AB0A]
     }
 
     .heading {
-        @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl
+        @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl md:text-2xl
     }
 
     .contact-input {

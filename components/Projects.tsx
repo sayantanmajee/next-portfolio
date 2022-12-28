@@ -25,20 +25,22 @@ const Projects = ({ projects }: Props) => {
                 opacity: 1,
                 x: 0
             }}
-            className='h-screen flex relative overflow-hidden flex-col text-left md:sflex-row max-w-full justify-evenly mx-auto items-center z-0'>
+            className='h-screen flex relative overflow-hidden flex-col text-left max-w-full mx-auto items-center z-0'>
             <div className='flex flex-col items-center justify-center relative'>
 
-                <h3 className='heading'>
+                <h3 className='heading top-10'>
                     Projects
                 </h3>
             </div>
-            <div className='mt-5 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60  mb-24 md:mb-30'>
+            <div className='md:mt-5 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60  mb-20 md:mb-28'>
                 {/* projectCard */}
                 {projects.map((project, idx) => (
-                    <div key={idx} className='w-screen snap-center flex flex-shrink-0 flex-col space-y-5 items-center justify-center p-20 smd:p-44 h-[800px]'>
+                    <div 
+                    key={idx}
+                    className='w-screen snap-center flex lg:flex-row flex-shrink-0 flex-col space-y-5 lg:space-x-10 lg:space-y-0 items-center justify-start md:justify-center p-6 pt-24 lg:p-20 smd:p-44 h-[800px]'>
                         <motion.img
                             initial={{
-                                y: -300,
+                                y: -200,
                                 opacity: 0
                             }}
                             transition={{
@@ -49,21 +51,21 @@ const Projects = ({ projects }: Props) => {
                                 y: 0
                             }}
                             viewport={{ once: true }}
-                            src={urlFor(project?.image).url()} alt="" height="10" width="10" className='h-64 w-10/12 md:w-auto object-cover' />
+                            src={urlFor(project?.image).url()} alt="" height="10" width="10" className='h-40 lg:h-72 w-fit md:w-auto object-cover' />
 
 
 
-                        <div className='space-y-5 px-0 md:px-10 max-w-6xl'>
-                            <h4 className='text-2xl md:text-3xl xl:text-4xl font-semibold text-center'><span className='underline decoration-[#F7AB0A]/60'>{idx + 1} of {projects.length + " "}:</span>{" " + project?.title}</h4>
+                        <div className='space-y-2 lg:space-y-5 px-0 md:px-10 max-w-6xl'>
+                            <h4 className='text-xl md:text-2xl lg:text-4xl font-semibold text-center'><span className='underline decoration-[#F7AB0A]/60'>{idx + 1} of {projects.length + " "}:</span>{" " + project?.title}</h4>
 
-                            <div className='flex flex-row items-center justify-center space-x-4'>
+                            <div className='flex flex-row items-center justify-center space-x-2 md:space-x-4 bg-[#6B728E]/25 md:bg-inherit py-1 rounded-lg'>
 
                                 {project.technologies.map((technology) => (
                                     <Image
                                         key={technology._id}
                                         src={urlFor(technology?.image).url()}
                                         alt=""
-                                        className='h-10 w-10 rounded-full'
+                                        className='h-7 w-7 md:h-10 md:w-10 rounded-full'
                                         height={10}
                                         width={10} />
                                 ))}
@@ -92,7 +94,7 @@ const Projects = ({ projects }: Props) => {
                                     bgColor='transparent' />
                             </div>
 
-                            <p className='text-base md:text-lg text-center md:text-left line-clamp-2 lg:line-clamp-none'>
+                            <p className='text-sm md:text-sm lg:text-lg text-center md:text-left line-clamp-4 lg:line-clamp-none'>
                                 {project.summary}
                             </p>
                         </div>
