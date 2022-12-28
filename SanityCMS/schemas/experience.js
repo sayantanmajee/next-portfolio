@@ -49,5 +49,14 @@ export default {
       of: [{ type: "string" }]
     },
   ],
+  // orderings: [
+  //   {
+  //     title: 'Date Started',
+  //     name: 'dateStartedAsc',
+  //     by: [
+  //       {field: 'DateStarted', direction: 'asc'}
+  //     ]
+  //   },
+  // ]
 
 }
