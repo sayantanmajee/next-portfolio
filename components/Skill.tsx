@@ -43,7 +43,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
                     opacity: 0.75
                 }}
                 className='absolute opacity-0 transition duration-300 ease-in-out group-hover:bg-[#50577A] h-14 w-14 md:h-20 md:w-20 xl:h-24 xl:w-24 rounded-full z-0'>
-                <div className='flex rounded-full items-center justify-center h-full opacity-0 hover:opacity-100 transition duration-300 ease-in-out'>
+                <div className='select-none flex rounded-full items-center justify-center h-full opacity-0 hover:opacity-100 transition duration-300 ease-in-out'>
                     <p className='text-xl xl:text-2xl font-bold uppercase text-[#F7AB0A] '>{`${skill.progress}%`}</p>
                 </div>
             </motion.div>
