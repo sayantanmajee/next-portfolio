@@ -11,13 +11,13 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
     return (
-        <article className='flex flex-col rounded-lg items-center space-y-4 md:space-y-7 flex-shrink-0 w-[330px]  md:w-[600px] md:h-[93%] snap-center bg-[#474E68] px-5 py-3 mb-10 opacsity-70 hover:opacity-100 transition-opacity duration-200 overflow-hidden '>
+        <article className='flex flex-col rounded-lg items-start space-y-4 md:space-y-7 flex-shrink-0 w-[330px]  md:w-[600px] md:h-[93%] snap-center bg-[#474E68] px-5 py-3 mb-10 opacsity-70 hover:opacity-100 transition-opacity duration-200 overflow-hidden '>
             <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2 }}
-                className='h-20 w-20 md:w-24 md:h-24 xl:w-32 xl:h-32 my-2 md:my-4 rounded-md  object-scale-down object-center'
+                className='h-20 self-center w-20 md:w-24 md:h-24 xl:w-32 xl:h-32 my-2 md:my-4 rounded-md  object-scale-down object-center'
                 src={urlFor(experience?.companyImage).url()} alt="" />
 
             <div className='h-2/3 px-0 md:px-10 pb-2 space-y-2 md:space-y-3'>
