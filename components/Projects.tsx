@@ -32,12 +32,12 @@ const Projects = ({ projects }: Props) => {
                     Projects
                 </h3>
             </div>
-            <div className='md:mt-5 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60  mb-20 md:mb-28'>
+            <div className='md:mt-5 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60  mb-24 md:mb-28'>
                 {/* projectCard */}
                 {projects.map((project, idx) => (
                     <div 
                     key={idx}
-                    className='w-screen snap-center flex lg:flex-row flex-shrink-0 flex-col space-y-5 lg:space-x-10 lg:space-y-0 items-center justify-start md:justify-center p-6 pt-24 lg:p-20 smd:p-44 h-[800px]'>
+                    className='w-screen snap-center flex lg:flex-row flex-shrink-0 flex-col space-y-5 lg:space-x-10 lg:space-y-0 items-center justify-start md:justify-center p-6 pt-24 lg:p-20 smd:p-44 h-[700px] md:h-[800px]'>
                         <motion.img
                             initial={{
                                 y: -200,

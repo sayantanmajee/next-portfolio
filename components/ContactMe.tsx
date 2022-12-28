@@ -35,7 +35,7 @@ const ContactMe = ({ pageInfo }: Props) => {
   };
 
   return (
-    <div className='space-y-20'>
+    <div className='space-y-1'>
       <div className='flex flex-col items-center relative justify-center'>
         <h3 className='heading top-10'>Contact</h3>
       </div>

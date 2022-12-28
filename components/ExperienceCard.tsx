@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience }: Props) => {
                 <p className='uppercase text-xs md:text-base text-gray-400 '>
                     {new Date(experience.dateStarted).toDateString().slice(4)}{" "}-{" "}{experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString().slice(4)}
                 </p>
-                <ul className='h-4/6 md:h-[11rem] list-disc space-y-3 text-sm md:text-base overflow-y-scroll pr-3 md:pr-5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60'>
+                <ul className='h-3/4 md:h-[11rem] list-disc space-y-3 text-sm md:text-base overflow-y-scroll pr-3 md:pr-5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60'>
 
                     {experience.points.map((point, idx) => (
                         <li key={idx} className={idx%2=== 0 ?"text-[#F7AB0A]" : "text-[#6cbec4]"}>{point}</li>
